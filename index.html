@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Jenice ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 25px;
+      padding: 40px 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      background: #fff;
+      color: #ff5f7e;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    .page {
+      display: none;
+      animation: fade 0.8s ease;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      animation: naik 5s linear forwards;
+      font-size: 25px;
+      pointer-events: none;
+    }
+
+    @keyframes naik {
+      0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .big-heart {
+      font-size: 75px;
+      animation: denyut 1s infinite;
+      margin-bottom: 15px;
+    }
+
+    @keyframes denyut {
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    .small {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HALAMAN 1 -->
+    <div class="card page active" id="page1">
+      <div class="big-heart">❤️</div>
+
+      <h1>Hai Jenice...</h1>
+
+      <p>
+        Aku punya sesuatu yang spesial buat kamu.
+        Tapi kamu harus buka pelan-pelan ya 😚
+      </p>
+
+      <button onclick="nextPage(2)">
+        🎁 Buka Surprise
+      </button>
+    </div>
+
+
+    <!-- HALAMAN 2 -->
+    <div class="card page" id="page2">
+      <div class="big-heart">🎂</div>
+
+      <h2>Happy Birthday, Jenice! 🎉</h2>
+
+      <p>
+        Selamat ulang tahun untuk seseorang yang
+        sangat spesial. ❤️
+      </p>
+
+      <p>
+        Semoga hari ini dipenuhi kebahagiaan,
+        senyuman, dan hal-hal indah yang kamu inginkan.
+      </p>
+
+      <button onclick="nextPage(3)">
+        💌 Ada pesan lagi
+      </button>
+    </div>
+
+
+    <!-- HALAMAN 3 -->
+    <div class="card page" id="page3">
+
+      <div class="big-heart">💖</div>
+
+      <h2>Untuk Jenice</h2>
+
+      <p>
+        Terima kasih sudah menjadi bagian dari
+        cerita indah dalam hidupku.
+      </p>
+
+      <p>
+        Aku mungkin nggak selalu bisa memberikan
+        sesuatu yang sempurna, tapi aku selalu
+        berharap bisa melihat kamu bahagia.
+      </p>
+
+      <p>
+        Semoga semua impian kamu satu per satu
+        menjadi kenyataan.
+      </p>
+
+      <button onclick="nextPage(4)">
+        ✨ Lanjut...
+      </button>
+    </div>
+
+
+    <!-- HALAMAN 4 -->
+    <div class="card page" id="page4">
+
+      <div class="big-heart">🥰</div>
+
+      <h2>One More Thing...</h2>
+
+      <p>
+        Jangan lupa tersenyum hari ini.
+        Karena senyum kamu itu indah. ❤️
+      </p>
+
+      <p>
+        Sekali lagi...
+      </p>
+
+      <h1>HAPPY BIRTHDAY<br>JENICE! 🎂❤️</h1>
+
+      <p class="small">
+        Dibuat dengan penuh cinta untuk kamu.
+      </p>
+
+      <button onclick="createHearts()">
+        ❤️ Klik Ini!
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function nextPage(number) {
+
+      document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+      });
+
+      document.getElementById("page" + number)
+        .classList.add("active");
+
+      createHearts();
+    }
+
+
+    function createHearts() {
+
+      for (let i = 0; i < 20; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.innerHTML =
+          ["❤️","💕","💖","💗","💓"][Math.floor(Math.random() * 5)];
+
+        heart.style.left =
+          Math.random() * 100 + "vw";
+
+        heart.style.animationDuration =
+          (3 + Math.random() * 3) + "s";
+
+        heart.style.fontSize =
+          (15 + Math.random() * 25) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function() {
+          heart.remove();
+        }, 6000);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
