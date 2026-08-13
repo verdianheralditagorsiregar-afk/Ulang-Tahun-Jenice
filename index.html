@@ -3,281 +3,773 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Jenice ❤️</title>
+
+  <title>For Jenice ♡</title>
 
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       min-height: 100vh;
+      overflow-x: hidden;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #7b2948;
+
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.8) 0 3px, transparent 4px),
+        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.7) 0 4px, transparent 5px),
+        radial-gradient(circle at 30% 80%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
+        linear-gradient(
+          135deg,
+          #ffb6d5 0%,
+          #ff8fbd 35%,
+          #ffb7d7 65%,
+          #ffd1e5 100%
+        );
+
+      background-size: 180px 180px, 230px 230px, 200px 200px, cover;
+
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      color: #fff;
+      padding: 25px 15px;
+      position: relative;
     }
+
+
+    /* =========================
+       BUNGA DI BACKGROUND
+    ========================== */
+
+    .flower-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .flower-bg span {
+      position: absolute;
+      color: rgba(255,255,255,0.55);
+      text-shadow: 0 3px 15px rgba(255,70,140,0.25);
+      animation: floatingFlower 8s ease-in-out infinite;
+    }
+
+    .flower-bg span:nth-child(1) {
+      left: 5%;
+      top: 8%;
+      font-size: 55px;
+    }
+
+    .flower-bg span:nth-child(2) {
+      right: 7%;
+      top: 15%;
+      font-size: 70px;
+      animation-delay: 1s;
+    }
+
+    .flower-bg span:nth-child(3) {
+      left: 10%;
+      bottom: 15%;
+      font-size: 65px;
+      animation-delay: 2s;
+    }
+
+    .flower-bg span:nth-child(4) {
+      right: 12%;
+      bottom: 10%;
+      font-size: 50px;
+      animation-delay: 3s;
+    }
+
+    .flower-bg span:nth-child(5) {
+      left: 45%;
+      top: 4%;
+      font-size: 38px;
+      animation-delay: 1.5s;
+    }
+
+    .flower-bg span:nth-child(6) {
+      right: 40%;
+      bottom: 5%;
+      font-size: 42px;
+      animation-delay: 2.5s;
+    }
+
+
+    @keyframes floatingFlower {
+      0%,100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(8deg);
+      }
+    }
+
+
+    /* =========================
+       CONTAINER
+    ========================== */
 
     .container {
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
+      width: 100%;
+      max-width: 520px;
+      position: relative;
+      z-index: 2;
     }
+
+
+    /* =========================
+       CARD
+    ========================== */
 
     .card {
-      background: rgba(255,255,255,0.18);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 25px;
-      padding: 40px 25px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      display: none;
+
+      background: rgba(255,255,255,0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border: 1px solid rgba(255,255,255,0.8);
+
+      border-radius: 35px;
+
+      padding: 45px 28px;
+
+      text-align: center;
+
+      box-shadow:
+        0 25px 60px rgba(176, 37, 91, 0.22),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+
+      animation: cardAppear 1s ease;
     }
 
+    .card.active {
+      display: block;
+    }
+
+
+    @keyframes cardAppear {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+
+    /* =========================
+       LOVE
+    ========================== */
+
+    .elegant-love {
+      font-size: 80px;
+      color: #e94d83;
+
+      margin-bottom: 15px;
+
+      text-shadow:
+        0 5px 15px rgba(230, 55, 120, 0.25);
+
+      animation: heartBeat 2s ease-in-out infinite;
+    }
+
+    @keyframes heartBeat {
+
+      0%,100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+
+    /* =========================
+       TEXT
+    ========================== */
+
     h1 {
-      font-size: 38px;
+      font-size: 42px;
+      font-weight: normal;
+      letter-spacing: 1px;
+      color: #a72f5c;
       margin-bottom: 15px;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 32px;
+      font-weight: normal;
+      color: #a72f5c;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
+      color: #7b4058;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: #b45577;
       margin-bottom: 25px;
     }
 
+
+    /* =========================
+       FOTO
+    ========================== */
+
+    .photo-frame {
+      width: 100%;
+      max-width: 340px;
+
+      margin: 0 auto 25px;
+
+      padding: 8px;
+
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        #ffd0e2,
+        #ffffff
+      );
+
+      border-radius: 25px;
+
+      box-shadow:
+        0 12px 30px rgba(177, 49, 95, 0.2);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      display: block;
+
+      border-radius: 18px;
+
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================== */
+
     button {
       border: none;
-      padding: 15px 30px;
-      border-radius: 30px;
-      background: #fff;
-      color: #ff5f7e;
+
+      padding: 15px 32px;
+
+      border-radius: 50px;
+
+      background: linear-gradient(
+        135deg,
+        #e94d83,
+        #d93470
+      );
+
+      color: white;
+
+      font-family: Georgia, serif;
+
       font-size: 17px;
-      font-weight: bold;
+
       cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+      box-shadow:
+        0 8px 20px rgba(210, 46, 108, 0.3);
+
+      transition: all 0.3s ease;
     }
 
     button:hover {
-      transform: scale(1.08);
+      transform: translateY(-3px) scale(1.03);
+
+      box-shadow:
+        0 12px 25px rgba(210, 46, 108, 0.4);
     }
 
-    .page {
-      display: none;
-      animation: fade 0.8s ease;
-    }
 
-    .page.active {
-      display: block;
-    }
+    /* =========================
+       FLOATING FLOWERS + LOVE
+    ========================== */
 
-    .heart {
+    .floating {
       position: fixed;
-      bottom: -30px;
-      animation: naik 5s linear forwards;
-      font-size: 25px;
+
+      bottom: -50px;
+
       pointer-events: none;
+
+      z-index: 10;
+
+      animation: floatUp linear forwards;
+
+      opacity: 0.9;
     }
 
-    @keyframes naik {
+    @keyframes floatUp {
+
       0% {
-        transform: translateY(0) rotate(0);
+        transform:
+          translateY(0)
+          rotate(0deg)
+          scale(0.7);
+
+        opacity: 0;
+      }
+
+      15% {
         opacity: 1;
       }
 
       100% {
-        transform: translateY(-110vh) rotate(360deg);
+        transform:
+          translateY(-110vh)
+          rotate(360deg)
+          scale(1.2);
+
         opacity: 0;
       }
     }
 
-    @keyframes fade {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* =========================
+       GARIS HIASAN
+    ========================== */
+
+    .decoration {
+      color: #df5681;
+      font-size: 22px;
+      letter-spacing: 8px;
+      margin: 10px 0 25px;
     }
 
-    .big-heart {
-      font-size: 75px;
-      animation: denyut 1s infinite;
-      margin-bottom: 15px;
-    }
 
-    @keyframes denyut {
-      50% {
-        transform: scale(1.15);
-      }
-    }
+    /* =========================
+       FOOTER
+    ========================== */
 
     .small {
-      font-size: 14px;
-      opacity: 0.85;
+      margin-top: 25px;
+
+      font-size: 13px;
+
+      color: #a85b76;
+
+      letter-spacing: 1px;
     }
+
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 600px) {
+
+      .card {
+        padding: 38px 22px;
+        border-radius: 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .elegant-love {
+        font-size: 68px;
+      }
+
+      .flower-bg span:nth-child(1) {
+        font-size: 38px;
+      }
+
+      .flower-bg span:nth-child(2) {
+        font-size: 48px;
+      }
+
+      .flower-bg span:nth-child(3) {
+        font-size: 45px;
+      }
+
+      .flower-bg span:nth-child(4) {
+        font-size: 38px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <div class="container">
 
-    <!-- HALAMAN 1 -->
-    <div class="card page active" id="page1">
-      <div class="big-heart">❤️</div>
+  <!-- BUNGA BACKGROUND -->
 
-      <h1>Hai Jenice...</h1>
+  <div class="flower-bg">
 
-      <p>
-        Aku punya sesuatu yang spesial buat kamu.
-        Tapi kamu harus buka pelan-pelan ya 😚
-      </p>
-
-      <button onclick="nextPage(2)">
-        🎁 Buka Surprise
-      </button>
-    </div>
-
-
-    <!-- HALAMAN 2 -->
-    <div class="card page" id="page2">
-      <div class="big-heart">🎂</div>
-
-      <h2>Happy Birthday, Jenice! 🎉</h2>
-
-      <p>
-        Selamat ulang tahun untuk seseorang yang
-        sangat spesial. ❤️
-      </p>
-
-      <p>
-        Semoga hari ini dipenuhi kebahagiaan,
-        senyuman, dan hal-hal indah yang kamu inginkan.
-      </p>
-
-      <button onclick="nextPage(3)">
-        💌 Ada pesan lagi
-      </button>
-    </div>
-
-
-    <!-- HALAMAN 3 -->
-    <div class="card page" id="page3">
-
-      <div class="big-heart">💖</div>
-
-      <h2>Untuk Jenice</h2>
-
-      <p>
-        Terima kasih sudah menjadi bagian dari
-        cerita indah dalam hidupku.
-      </p>
-
-      <p>
-        Aku mungkin nggak selalu bisa memberikan
-        sesuatu yang sempurna, tapi aku selalu
-        berharap bisa melihat kamu bahagia.
-      </p>
-
-      <p>
-        Semoga semua impian kamu satu per satu
-        menjadi kenyataan.
-      </p>
-
-      <button onclick="nextPage(4)">
-        ✨ Lanjut...
-      </button>
-    </div>
-
-
-    <!-- HALAMAN 4 -->
-    <div class="card page" id="page4">
-
-      <div class="big-heart">🥰</div>
-
-      <h2>One More Thing...</h2>
-
-      <p>
-        Jangan lupa tersenyum hari ini.
-        Karena senyum kamu itu indah. ❤️
-      </p>
-
-      <p>
-        Sekali lagi...
-      </p>
-
-      <h1>HAPPY BIRTHDAY<br>JENICE! 🎂❤️</h1>
-
-      <p class="small">
-        Dibuat dengan penuh cinta untuk kamu.
-      </p>
-
-      <button onclick="createHearts()">
-        ❤️ Klik Ini!
-      </button>
-
-    </div>
+    <span>🌸</span>
+    <span>🌷</span>
+    <span>🌺</span>
+    <span>🌸</span>
+    <span>✿</span>
+    <span>❀</span>
 
   </div>
 
 
+
+  <div class="container">
+
+
+    <!-- =========================
+         HALAMAN 1
+    ========================== -->
+
+    <div class="card active" id="page1">
+
+      <div class="elegant-love">
+        ♡
+      </div>
+
+      <div class="decoration">
+        ✿ ♡ ✿
+      </div>
+
+      <div class="subtitle">
+        A LITTLE SURPRISE FOR YOU
+      </div>
+
+      <h1>
+        Hai Jenice...
+      </h1>
+
+      <p>
+        Ada sesuatu yang sudah aku siapkan
+        khusus untuk kamu.
+      </p>
+
+      <p>
+        Buka perlahan ya... ♡
+      </p>
+
+      <button onclick="nextPage(2)">
+        Buka Surprise ♡
+      </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         HALAMAN 2
+    ========================== -->
+
+    <div class="card" id="page2">
+
+      <div class="elegant-love">
+        ♥
+      </div>
+
+      <div class="decoration">
+        🌸 ♡ 🌸
+      </div>
+
+      <h2>
+        Happy Birthday
+      </h2>
+
+      <h1>
+        Jenice ♡
+      </h1>
+
+      <p>
+        Hari ini adalah hari spesial,
+        karena seseorang yang sangat berarti
+        sedang bertambah usia.
+      </p>
+
+      <p>
+        Semoga hari ini membawa banyak
+        kebahagiaan untuk kamu. 🌸
+      </p>
+
+      <button onclick="nextPage(3)">
+        Ada sesuatu lagi...
+      </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         HALAMAN 3 - FOTO
+    ========================== -->
+
+    <div class="card" id="page3">
+
+      <div class="decoration">
+        🌷 ♡ 🌷
+      </div>
+
+      <h2>
+        One Beautiful Memory
+      </h2>
+
+      <div class="photo-frame">
+
+        <!-- GANTI NAMA FILE FOTO DI SINI -->
+
+        <img
+          src="jenice.jpg"
+          alt="Foto Jenice"
+        >
+
+      </div>
+
+      <p>
+        Satu foto mungkin sederhana,
+        tapi setiap kenangan di baliknya
+        selalu punya cerita. ♡
+      </p>
+
+      <button onclick="nextPage(4)">
+        Untuk Jenice 💌
+      </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         HALAMAN 4
+    ========================== -->
+
+    <div class="card" id="page4">
+
+      <div class="elegant-love">
+        ♡
+      </div>
+
+      <div class="decoration">
+        ❀ ♥ ❀
+      </div>
+
+      <h2>
+        Untuk Kamu
+      </h2>
+
+      <p>
+        Terima kasih sudah hadir
+        dan menjadi bagian dari
+        cerita yang indah.
+      </p>
+
+      <p>
+        Aku berharap setiap langkah
+        yang kamu ambil selalu membawa
+        kamu lebih dekat dengan
+        semua impianmu.
+      </p>
+
+      <p>
+        Tetap menjadi Jenice yang
+        selalu punya senyum indah itu. 🌸
+      </p>
+
+      <button onclick="nextPage(5)">
+        Satu pesan terakhir...
+      </button>
+
+    </div>
+
+
+
+    <!-- =========================
+         HALAMAN 5
+    ========================== -->
+
+    <div class="card" id="page5">
+
+      <div class="elegant-love">
+        ♥
+      </div>
+
+      <div class="decoration">
+        🌸 ♡ 🌸
+      </div>
+
+      <h1>
+        HAPPY BIRTHDAY
+      </h1>
+
+      <h2>
+        JENICE ♡
+      </h2>
+
+      <p>
+        Semoga tahun ini menjadi
+        salah satu tahun terbaik
+        dalam hidupmu.
+      </p>
+
+      <p>
+        Semoga selalu sehat,
+        bahagia, dan dikelilingi
+        orang-orang yang menyayangimu.
+      </p>
+
+      <p>
+        Dan semoga senyum itu
+        selalu ada. 🌷
+      </p>
+
+      <button onclick="createFlowers()">
+        ♡ Untukmu
+      </button>
+
+      <div class="small">
+        Made with love, just for Jenice 🌸
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
   <script>
+
+    /* =========================
+       PINDAH HALAMAN
+    ========================== */
 
     function nextPage(number) {
 
-      document.querySelectorAll(".page").forEach(function(page) {
-        page.classList.remove("active");
-      });
+      document
+        .querySelectorAll(".card")
+        .forEach(function(page) {
 
-      document.getElementById("page" + number)
+          page.classList.remove("active");
+
+        });
+
+
+      document
+        .getElementById("page" + number)
         .classList.add("active");
 
-      createHearts();
+
+      createFlowers();
+
     }
 
 
-    function createHearts() {
 
-      for (let i = 0; i < 20; i++) {
+    /* =========================
+       BUNGA + LOVE TERBANG
+    ========================== */
 
-        let heart = document.createElement("div");
+    function createFlowers() {
 
-        heart.className = "heart";
+      const symbols = [
+        "🌸",
+        "🌷",
+        "🌺",
+        "🌹",
+        "❀",
+        "✿",
+        "♡",
+        "♥",
+        "💕"
+      ];
 
-        heart.innerHTML =
-          ["❤️","💕","💖","💗","💓"][Math.floor(Math.random() * 5)];
 
-        heart.style.left =
+      for (let i = 0; i < 25; i++) {
+
+        const flower =
+          document.createElement("div");
+
+
+        flower.className = "floating";
+
+
+        flower.innerHTML =
+          symbols[
+            Math.floor(
+              Math.random() * symbols.length
+            )
+          ];
+
+
+        flower.style.left =
           Math.random() * 100 + "vw";
 
-        heart.style.animationDuration =
-          (3 + Math.random() * 3) + "s";
 
-        heart.style.fontSize =
-          (15 + Math.random() * 25) + "px";
+        flower.style.fontSize =
+          (18 + Math.random() * 25) + "px";
 
-        document.body.appendChild(heart);
+
+        flower.style.animationDuration =
+          (5 + Math.random() * 5) + "s";
+
+
+        flower.style.animationDelay =
+          Math.random() * 1.5 + "s";
+
+
+        document.body.appendChild(flower);
+
 
         setTimeout(function() {
-          heart.remove();
-        }, 6000);
+
+          flower.remove();
+
+        }, 11000);
+
       }
+
     }
 
+
+    /* =========================
+       BUNGA MUNCUL OTOMATIS
+    ========================== */
+
+    setInterval(function() {
+
+      createFlowers();
+
+    }, 9000);
+
+
   </script>
+
 
 </body>
 </html>
