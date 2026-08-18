@@ -7,6 +7,7 @@
   <title>For Jenice My Future Wife ♡</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -16,13 +17,27 @@
     body {
       min-height: 100vh;
       overflow-x: hidden;
+
       font-family: Georgia, "Times New Roman", serif;
+
       color: #7b2948;
 
       background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.8) 0 3px, transparent 4px),
-        radial-gradient(circle at 80% 30%, rgba(255,255,255,0.7) 0 4px, transparent 5px),
-        radial-gradient(circle at 30% 80%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(255,255,255,0.8) 0 3px,
+          transparent 4px
+        ),
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(255,255,255,0.7) 0 4px,
+          transparent 5px
+        ),
+        radial-gradient(
+          circle at 30% 80%,
+          rgba(255,255,255,0.7) 0 3px,
+          transparent 4px
+        ),
         linear-gradient(
           135deg,
           #ffb6d5 0%,
@@ -31,33 +46,47 @@
           #ffd1e5 100%
         );
 
-      background-size: 180px 180px, 230px 230px, 200px 200px, cover;
+      background-size:
+        180px 180px,
+        230px 230px,
+        200px 200px,
+        cover;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
       padding: 25px 15px;
+
       position: relative;
     }
 
 
     /* =========================
-       BUNGA DI BACKGROUND
+       BUNGA BACKGROUND
     ========================== */
 
     .flower-bg {
       position: fixed;
       inset: 0;
+
       pointer-events: none;
+
       overflow: hidden;
+
       z-index: 0;
     }
 
     .flower-bg span {
       position: absolute;
+
       color: rgba(255,255,255,0.55);
-      text-shadow: 0 3px 15px rgba(255,70,140,0.25);
-      animation: floatingFlower 8s ease-in-out infinite;
+
+      text-shadow:
+        0 3px 15px rgba(255,70,140,0.25);
+
+      animation:
+        floatingFlower 8s ease-in-out infinite;
     }
 
     .flower-bg span:nth-child(1) {
@@ -103,13 +132,19 @@
 
 
     @keyframes floatingFlower {
-      0%,100% {
-        transform: translateY(0) rotate(0deg);
+
+      0%, 100% {
+        transform:
+          translateY(0)
+          rotate(0deg);
       }
 
       50% {
-        transform: translateY(-18px) rotate(8deg);
+        transform:
+          translateY(-18px)
+          rotate(8deg);
       }
+
     }
 
 
@@ -120,7 +155,9 @@
     .container {
       width: 100%;
       max-width: 520px;
+
       position: relative;
+
       z-index: 2;
     }
 
@@ -132,11 +169,14 @@
     .card {
       display: none;
 
-      background: rgba(255,255,255,0.78);
+      background:
+        rgba(255,255,255,0.78);
+
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
 
-      border: 1px solid rgba(255,255,255,0.8);
+      border:
+        1px solid rgba(255,255,255,0.8);
 
       border-radius: 35px;
 
@@ -148,7 +188,8 @@
         0 25px 60px rgba(176, 37, 91, 0.22),
         inset 0 1px 0 rgba(255,255,255,0.8);
 
-      animation: cardAppear 1s ease;
+      animation:
+        cardAppear 1s ease;
     }
 
     .card.active {
@@ -157,15 +198,23 @@
 
 
     @keyframes cardAppear {
+
       from {
         opacity: 0;
-        transform: translateY(30px) scale(0.96);
+
+        transform:
+          translateY(30px)
+          scale(0.96);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+          translateY(0)
+          scale(1);
       }
+
     }
 
 
@@ -175,6 +224,7 @@
 
     .elegant-love {
       font-size: 80px;
+
       color: #e94d83;
 
       margin-bottom: 15px;
@@ -182,18 +232,20 @@
       text-shadow:
         0 5px 15px rgba(230, 55, 120, 0.25);
 
-      animation: heartBeat 2s ease-in-out infinite;
+      animation:
+        heartBeat 2s ease-in-out infinite;
     }
 
     @keyframes heartBeat {
 
-      0%,100% {
+      0%, 100% {
         transform: scale(1);
       }
 
       50% {
         transform: scale(1.08);
       }
+
     }
 
 
@@ -203,67 +255,44 @@
 
     h1 {
       font-size: 42px;
+
       font-weight: normal;
+
       letter-spacing: 1px;
+
       color: #a72f5c;
+
       margin-bottom: 15px;
     }
 
     h2 {
       font-size: 32px;
+
       font-weight: normal;
+
       color: #a72f5c;
+
       margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
+
       line-height: 1.8;
+
       color: #7b4058;
+
       margin-bottom: 18px;
     }
 
     .subtitle {
       font-size: 15px;
+
       letter-spacing: 2px;
+
       color: #b45577;
+
       margin-bottom: 25px;
-    }
-
-
-    /* =========================
-       FOTO
-    ========================== */
-
-    .photo-frame {
-      width: 100%;
-      max-width: 340px;
-
-      margin: 0 auto 25px;
-
-      padding: 8px;
-
-      background: linear-gradient(
-        135deg,
-        #ffffff,
-        #ffd0e2,
-        #ffffff
-      );
-
-      border-radius: 25px;
-
-      box-shadow:
-        0 12px 30px rgba(177, 49, 95, 0.2);
-    }
-
-    .photo-frame img {
-      width: 100%;
-      display: block;
-
-      border-radius: 18px;
-
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
     }
 
 
@@ -278,11 +307,12 @@
 
       border-radius: 50px;
 
-      background: linear-gradient(
-        135deg,
-        #e94d83,
-        #d93470
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #e94d83,
+          #d93470
+        );
 
       color: white;
 
@@ -295,11 +325,14 @@
       box-shadow:
         0 8px 20px rgba(210, 46, 108, 0.3);
 
-      transition: all 0.3s ease;
+      transition:
+        all 0.3s ease;
     }
 
     button:hover {
-      transform: translateY(-3px) scale(1.03);
+      transform:
+        translateY(-3px)
+        scale(1.03);
 
       box-shadow:
         0 12px 25px rgba(210, 46, 108, 0.4);
@@ -319,7 +352,8 @@
 
       z-index: 10;
 
-      animation: floatUp linear forwards;
+      animation:
+        floatUp linear forwards;
 
       opacity: 0.9;
     }
@@ -347,6 +381,7 @@
 
         opacity: 0;
       }
+
     }
 
 
@@ -356,8 +391,11 @@
 
     .decoration {
       color: #df5681;
+
       font-size: 22px;
+
       letter-spacing: 8px;
+
       margin: 10px 0 25px;
     }
 
@@ -378,6 +416,38 @@
 
 
     /* =========================
+       SPOTIFY
+    ========================== */
+
+    .spotify-player {
+      width: 100%;
+
+      max-width: 520px;
+
+      height: 80px;
+
+      margin-top: 15px;
+
+      border-radius: 15px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 8px 20px rgba(176, 37, 91, 0.15);
+    }
+
+    .spotify-player iframe {
+      display: block;
+
+      width: 100%;
+
+      height: 80px;
+
+      border: 0;
+    }
+
+
+    /* =========================
        MOBILE
     ========================== */
 
@@ -385,6 +455,7 @@
 
       .card {
         padding: 38px 22px;
+
         border-radius: 28px;
       }
 
@@ -419,16 +490,28 @@
       .flower-bg span:nth-child(4) {
         font-size: 38px;
       }
+
+      .spotify-player {
+        height: 80px;
+      }
+
+      .spotify-player iframe {
+        height: 80px;
+      }
+
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-  <!-- BUNGA BACKGROUND -->
+  <!-- =========================
+       BUNGA BACKGROUND
+  ========================== -->
 
   <div class="flower-bg">
 
@@ -442,6 +525,9 @@
   </div>
 
 
+  <!-- =========================
+       CONTAINER
+  ========================== -->
 
   <div class="container">
 
@@ -484,7 +570,6 @@
     </div>
 
 
-
     <!-- =========================
          HALAMAN 2
     ========================== -->
@@ -509,8 +594,8 @@
 
       <p>
         Hari ini adalah hari spesial,
-        karena seseorang yang akan menjadi Istriku 
-        sedang bertambah usia.
+        karena seseorang yang akan menjadi
+        Istriku sedang bertambah usia.
       </p>
 
       <p>
@@ -527,6 +612,43 @@
 
     <!-- =========================
          HALAMAN 3
+    ========================== -->
+
+    <div class="card" id="page3">
+
+      <div class="elegant-love">
+        ♡
+      </div>
+
+      <div class="decoration">
+        🌷 ♡ 🌷
+      </div>
+
+      <h2>
+        One Beautiful Memory
+      </h2>
+
+      <p>
+        Setiap momen bersamamu
+        selalu menjadi kenangan
+        yang indah untukku. ♡
+      </p>
+
+      <p>
+        Tidak perlu sebuah foto
+        untuk mengingat betapa
+        berartinya kamu bagiku.
+      </p>
+
+      <button onclick="nextPage(4)">
+        Untuk Jenice 💌
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         HALAMAN 4
     ========================== -->
 
     <div class="card" id="page4">
@@ -566,7 +688,6 @@
       </button>
 
     </div>
-
 
 
     <!-- =========================
@@ -619,11 +740,32 @@
     </div>
 
 
+    <!-- =========================
+         SPOTIFY
+    ========================== -->
+
+    <div class="spotify-player">
+
+      <iframe
+        src="https://open.spotify.com/embed/track/7n4iQZkwmz22l2LqooyB4H"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+
+    </div>
+
+
   </div>
 
 
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
   <script>
+
 
     /* =========================
        PINDAH HALAMAN
@@ -640,15 +782,20 @@
         });
 
 
-      document
-        .getElementById("page" + number)
-        .classList.add("active");
+      const next =
+        document.getElementById("page" + number);
+
+
+      if (next) {
+
+        next.classList.add("active");
+
+      }
 
 
       createFlowers();
 
     }
-
 
 
     /* =========================
@@ -676,13 +823,15 @@
           document.createElement("div");
 
 
-        flower.className = "floating";
+        flower.className =
+          "floating";
 
 
         flower.innerHTML =
           symbols[
             Math.floor(
-              Math.random() * symbols.length
+              Math.random() *
+              symbols.length
             )
           ];
 
@@ -703,7 +852,9 @@
           Math.random() * 1.5 + "s";
 
 
-        document.body.appendChild(flower);
+        document.body.appendChild(
+          flower
+        );
 
 
         setTimeout(function() {
@@ -729,15 +880,7 @@
 
 
   </script>
-<iframe
-  src= "https://open.spotify.com/embed/track/7n4iQZkwmz22l2LqooyB4H"
-  width="100%"
-  height=80
-  framborder="0"
-  allowtransparecy="true"
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">'
-<iframe
 
-    
+
 </body>
 </html>
